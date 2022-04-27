@@ -1,0 +1,20 @@
+.cabecalhoPrincipal .container {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.conteudoPrincipal .conteudoPrincipal-tabela{
+    display: flex;
+    
+}
+
+.rodapePrincipal {
+    display: flex;
+}
