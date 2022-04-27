@@ -19,13 +19,28 @@ const criaNovaLinha = (id, nome, preco, multiplo) => {
 
 const tabela = document.querySelector('[data-tabela]')
 
-const http = new XMLHttpRequest()
-
-http.open('GET','http://localhost:3000/profile')
-http.send()
-http.onload = () => {
-    const data = JSON.parse(http.response)
-    data.forEach(element => {
-        tabela.appendChild(criaNovaLinha(element.id, element.nome, element.preco, element.multiplo))
+const listaPedidos = () => {
+    const promise = new Promise ((resolve, reject) =>{
+        const http = new XMLHttpRequest()
+        http.open('GET','http://localhost:3000/profile')
+        
+        http.onload = () => {
+            if(http.status >= 400){
+                reject(JSON.parse(http.response))
+            } else {
+                resolve(JSON.parse(http.response))
+            }
+        }   
+        
+        http.send()
     })
+    console.log("Teste promise")
+    return promise
 }
+
+
+listaPedidos()
+.then(data => {
+    data.forEach(element => {
+    tabela.appendChild(criaNovaLinha(element.id, element.nome, element.preco, element.multiplo))
+})})
