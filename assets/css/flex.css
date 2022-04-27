@@ -10,7 +10,7 @@
     gap: 10px;
 }
 
-.conteudoPrincipal .conteudoPrincipal-tabela{
+.conteudoPrincipal {
     display: flex;
     
 }
