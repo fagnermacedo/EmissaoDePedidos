@@ -15,7 +15,16 @@ pedidosService.carregaPedidoParaEdicao(id)
     inputId.value = dados.id
     inputNome.value = dados.nome 
     inputPreco.value = dados.preco 
-    inputMultiplo.value = dados.multiplo 
+    inputMultiplo.value = dados.multiplo     
+})
 
-    
+const formulario = document.querySelector('[data-form]')
+
+formulario.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
+    pedidosService.atualizaPedido(id, inputNome.value, inputPreco.value, inputMultiplo.value)
+    .then(() => {
+        window.location.href = "../telas/edicao_concluida.html"
+    })
 })

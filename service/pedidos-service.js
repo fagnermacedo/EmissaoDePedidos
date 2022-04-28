@@ -37,6 +37,24 @@ const carregaPedidoParaEdicao = (id) => {
     })
 }
 
+const atualizaPedido = (id, nome, preco, multiplo) => {
+    return fetch(`http://localhost:3000/profile/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-type' : 'application/json'
+        },
+        body: JSON.stringify({
+            id: id,
+            nome: nome,
+            preco: preco,
+            multiplo: multiplo
+        })
+    })
+    .then( resposta => {
+        return resposta.json()
+    })
+}
+
 // ##############################################################
 //Processo para serem usado quando a página for publicada
 
@@ -53,6 +71,7 @@ export const pedidosService = {
     criaPedido,
     removePedido,
     carregaPedidoParaEdicao,
+    atualizaPedido,
 
     listaPedidosSite
 }
