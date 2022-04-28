@@ -45,6 +45,8 @@ pedidosService.listaPedidos()
     tabela.appendChild(criaNovaLinha(element.id, element.nome, element.preco, element.multiplo))
 })})
 
+
+// Apenas um teste para pegar o dados do site
 pedidosService.listaPedidosSite()
 .then(data => {
     console.log(data)

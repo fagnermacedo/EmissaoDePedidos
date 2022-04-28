@@ -24,9 +24,16 @@ const criaPedido = (id, nome, preco, multiplo) =>{
 }
 
 const removePedido = (id) => {
-    return fetch(`http://localhost:3000/profile/${id}`, {
+    return fetch(`http://localhost:3000/profile/${id}`,{
         method: 'DELETE',
 
+    })
+}
+
+const carregaPedidoParaEdicao = (id) => {
+    return fetch(`http://localhost:3000/profile/${id}`)
+    .then(resposta => {
+        return resposta.json()
     })
 }
 
@@ -45,6 +52,7 @@ export const pedidosService = {
     listaPedidos,
     criaPedido,
     removePedido,
-    
+    carregaPedidoParaEdicao,
+
     listaPedidosSite
 }
