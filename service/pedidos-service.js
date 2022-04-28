@@ -23,14 +23,28 @@ const criaPedido = (id, nome, preco, multiplo) =>{
     })
 }
 
+const removePedido = (id) => {
+    return fetch(`http://localhost:3000/profile/${id}`, {
+        method: 'DELETE',
+
+    })
+}
+
+// ##############################################################
+//Processo para serem usado quando a página for publicada
+
 const listaPedidosSite = () => {
     return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
     .then(resposta => {
         return resposta.json()
     })
 }
+
+//###############################################################
 export const pedidosService = {
     listaPedidos,
     criaPedido,
+    removePedido,
+    
     listaPedidosSite
 }
