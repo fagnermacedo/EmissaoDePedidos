@@ -1,0 +1,14 @@
+.cabecalhoPrincipal .container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.conteudoPrincipal {
+    display: flex;
+    
+}
+
+.rodapePrincipal {
+    display: flex;
+}

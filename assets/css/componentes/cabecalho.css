@@ -1,0 +1,13 @@
+.cabecalho {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 10px #55a6ff38;
+}
+
+.cabecalho-logo {
+    width: 5rem;
+    padding-left: 40px;
+}
+.cabecalhoPrincipal-nav {
+    display: flex;
+}

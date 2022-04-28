@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site para a emissão de pedidos</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/componentes/tabela.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/componentes/cabecalho.css">
     <link rel="stylesheet" href="../assets/css/flex.css">
 </head>
 <body>
-    <header class="cabecalhoPrincipal">
+    <header class="cabecalhoPrincipal cabecalho">
+        <img src="../img/logo-star-wars.png" alt="Logotipo Star Wars" class="cabecalho-logo">
         <div class="container">
             <nav class="cabecalhoPrincipal-nav">
                 <a class="cabecalhoPrincipal-nav-link">Produtos</a>
@@ -19,8 +20,8 @@
             </nav>
         </div>
     </header>
-    <main class="container">
-        <section class="cadastro-pedido">
+    <main class="container-cadastro-pedido flex-conteudo-concluido ">
+        <section class="cadastro-pedido cartao">
             <span class="cadastro-pedido-concluido"></span>
             <h1 class="cadastro-pedido__titulo">Pedido editado com sucesso</h1>
             <a href="../index.html" class="botao">Voltar para tela de Pedidos</a>

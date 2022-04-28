@@ -1,25 +1,11 @@
 body {
-    background-color: #F2F5F7;
-    font-family: Arial, Helvetica, sans-serif;
-    
+
+    background-color: #355C7D;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-family: 'Pacifico', cursive;	
 }
 
 .container {
-    width: 94%;
-    margin: 0 auto;
-}
-.cabecalhoPrincipal {
-    background-color: #FFFFFF;	
-	padding: 20px 0;
-	border-bottom: #758797 solid 0.5px;
-    margin-bottom: 20px;
-}
-
-.conteudoPrincipal-tabela {
-    border: 1px solid black;
-    width: 70%;
-}
-
-.conteudoPrincipal-tabela th, td {
-    padding: 15px;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
