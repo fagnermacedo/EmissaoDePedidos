@@ -1,9 +1,9 @@
 .tabela {
     margin-top: 2.25rem;
 
-    width: 100%;
+    width: 60%;
 
-    background-color: var(--cor-contraste-claro);
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: var(--sombra);
 
@@ -21,13 +21,13 @@
 }
 
 .tabela thead {
-    font-size: var(--fonte-tamanho-tabela-cabecalho);
+    font-size: 22px;
 }
 
 .tabela th {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
-    border-bottom: 1px solid var(--cor-secundaria);
+    border-bottom: 1px solid #d6eaff;
 }
 
 .tabela td {
@@ -35,7 +35,7 @@
     padding-bottom: 1rem;
 }
 
-.tabela__alinhamento--direita {
+.tabela-novo_pedido {
     text-align: right;
 }
 

@@ -10,3 +10,10 @@ body {
     padding-left: 1rem;
 }
 
+.rodapePrincipal {
+    text-align: center;
+	background: url("../../img/bg.jpg");
+	padding: 25px 0;
+	margin-top: 20px;
+    color: aliceblue;
+}

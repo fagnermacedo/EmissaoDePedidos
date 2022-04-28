@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site para a emissão de pedidos</title>
     <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/componentes/tabela.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/componentes/tabela.css">
+    
     <link rel="stylesheet" href="assets/css/flex.css">
 </head>
 <body>
-    <header class="cabecalhoPrincipal">
+    <header class="cabecalhoPrincipal cabecalho">
+        <img src="../img/logo-star-wars.png" alt="Logotipo Star Wars" class="cabecalho-logo">
         <div class="container">
             <nav class="cabecalhoPrincipal-nav">
                 <a class="cabecalhoPrincipal-nav-link">Produtos</a>
@@ -20,15 +23,15 @@
         </div>
     </header>
     
-    <main class="conteudoPrincipal">
+    <main class="conteudoPrincipal flex-ConteudoPrincipal">
         <table class="tabela conteudoPrincipal-tabela">
             <thead>
                 <tr>
-                    <th class="conteudoPrincipal-tabela-coluna-id">id</th>
-                    <th class="conteudoPrincipal-tabela-coluna-nome">nome</th>
-                    <th class="conteudoPrincipal-tabela-coluna-preco">preco</th>
-                    <th class="conteudoPrincipal-tabela-coluna-multiplo">multiplo</th>
-                    <th class="conteudoPrincipal-tabela-coluna-adicionar"><a href="telas/cadastra_pedido.html" class="">Novo Pedido</a></th>
+                    <th class="conteudoPrincipal-tabela-coluna-id">Id</th>
+                    <th class="conteudoPrincipal-tabela-coluna-nome">Nome</th>
+                    <th class="conteudoPrincipal-tabela-coluna-preco">Preco</th>
+                    <th class="conteudoPrincipal-tabela-coluna-multiplo">Multiplo</th>
+                    <th class="conteudoPrincipal-tabela-coluna-adicionar tabela-novo_pedido"><a href="telas/cadastra_pedido.html" class="">Novo Pedido</a></th>
                 </tr>
             </thead>
             <tbody data-tabela>
@@ -37,8 +40,8 @@
         </table>
     </main>
 
-    <footer class="rodapePrincipal">
-
+    <footer class="rodapePrincipal">        
+        <p class="copyright">&copy; Copyright 2022 - Star Wars System</p>
     </footer>
 
 </body>

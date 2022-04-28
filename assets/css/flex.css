@@ -1,15 +1,19 @@
 .cabecalho {
     display: flex;
     justify-content: space-between;
-   align-items: center;
+    align-items: center;
 }
 
 .cabecalhoPrincipal-nav {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 20px;
 }
 
+.flex-ConteudoPrincipal {
+    display: flex;
+    justify-content: center;
+}
 .flex-conteudo-concluido {
     display: flex;
     justify-content: center;
@@ -17,4 +21,9 @@
     height: 4.75rem;
     margin-bottom: 2rem;
     
+}
+
+.rodapePrincipal {
+    display: flex;
+    justify-content: center;
 }
