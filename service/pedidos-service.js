@@ -37,6 +37,13 @@ const carregaPedidoParaEdicao = (id) => {
     })
 }
 
+const carregaClientesParaEdicao = (id) => {
+    return fetch(`http://localhost:3000/profile/${id}`)
+    .then(resposta => {
+        return resposta.json()
+    })
+}
+
 const atualizaPedido = (id, nome, preco, multiplo) => {
     return fetch(`http://localhost:3000/profile/${id}`, {
         method: 'PUT',
@@ -71,6 +78,7 @@ export const pedidosService = {
     criaPedido,
     removePedido,
     carregaPedidoParaEdicao,
+    carregaClientesParaEdicao,
     atualizaPedido,
 
     listaPedidosSite

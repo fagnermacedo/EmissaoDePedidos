@@ -47,8 +47,8 @@ pedidosService.listaPedidos()
 
 
 // Apenas um teste para pegar o dados do site
-pedidosService.listaPedidosSite()
-.then(data => {
-    console.log(data)
-})
-.catch(error => console.error(error))
+// pedidosService.listaPedidosSite()
+// .then(data => {
+//     console.log(data)
+// })
+// .catch(error => console.error(error))
