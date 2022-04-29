@@ -1,27 +1,28 @@
 import { pedidosService } from "../service/pedidos-service.js"
 
-const pegaURL = new URL(window.location)
+const criaNovaLinha = (nome) => {
+    
+    const novaLinhaPedido = document.createElement('select')
+    const conteudo = ` 
+        <option class="comboxOpcoes" value="" data-combo>${nome}</option>
+        `
+    novaLinhaPedido.innerHTML = conteudo
+    return novaLinhaPedido
+}
 
-const id = pegaURL.searchParams.get('id')
+const combobox = document.querySelector('[data-combobox]')
 
-const inputNome = document.querySelector('[data-nome]')
+let listaDeClientes = new Array ();
+let cont = 1
 
-
-pedidosService.carregaClientesParaEdicao(id)
-.then(function(response){
-    response.json()
-    .then(function(data){
-        console.log(data);
+pedidosService.carregaClientesParaEdicao()
+.then((resposta) => {
+    resposta.forEach((element) =>{        
+         listaDeClientes[cont] = (element.nome)  
+         combobox.appendChild(criaNovaLinha(element.nome))       
     })
 })
-
-// const formulario = document.querySelector('[data-form]')
-
-// formulario.addEventListener('submit', (evento) => {
-//     evento.preventDefault()
-
-//     pedidosService.atualizaPedido(id, inputNome.value, inputPreco.value, inputMultiplo.value)
-//     .then(() => {
-//         window.location.href = "../telas/edicao_concluida.html"
-//     })
+// .then(() => {
+//     combobox.appendChild(criaNovaLinha(listaDeClientes[cont].nome))   
+    
 // })
