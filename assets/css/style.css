@@ -1,5 +1,5 @@
 body {
-
+    width: 100%;
     background-color: #355C7D;
     font-family: Arial, Helvetica, sans-serif;    
     font-family: 'Pacifico', cursive;	
@@ -10,10 +10,16 @@ body {
     padding-left: 1rem;
 }
 
+.conteudoPrincipal {
+    padding: 20px;
+    padding-bottom: 30px; 
+}
+
 .rodapePrincipal {
+    
     text-align: center;
 	background: url("../../img/bg.jpg");
 	padding: 25px 0;
-	margin-top: 20px;
-    color: aliceblue;
+	margin-top: auto;
+    color: aliceblue; 
 }

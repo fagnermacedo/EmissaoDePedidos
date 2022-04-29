@@ -1,7 +1,7 @@
 .cartao {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: var(--sombra);
+    box-shadow: 0 5px 10px #d5e67838;
     width: 100%;
     max-width: 45rem;
     padding: 1.75rem;
