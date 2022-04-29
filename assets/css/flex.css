@@ -23,6 +23,17 @@ body {
     
 }
 
+.flex-cadastroPrincipal{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.flex-cadastraPedido {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .flex-conteudo-concluido {
     display: flex;
     justify-content: center;
@@ -32,6 +43,11 @@ body {
     margin-bottom: 2rem;
     
 } 
+
+.flex-alteraPedido {
+    display: flex;
+    justify-content: center;
+}
 
 .rodapePrincipal {
     display: flex;

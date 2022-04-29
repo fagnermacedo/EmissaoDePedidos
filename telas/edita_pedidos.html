@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site para a emissão de pedidos</title>
+    <title>Alteração de pedidos</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/componentes/tabela.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/componentes/cabecalho.css">
+    <link rel="stylesheet" href="../assets/css/componentes/tabela.css">
+    <link rel="stylesheet" href="../assets/css/componentes/cadastro.css">    
+    <link rel="stylesheet" href="../assets/css/componentes/cartao.css"> 
     <link rel="stylesheet" href="../assets/css/flex.css">
 </head>
 <body>
@@ -20,9 +23,9 @@
         </div>
     </header>
     
-    <main class="conteudoPrincipal">
+    <main class="flex-alteraPedido conteudoPrincipal">
         <section class="cartao cadastro">
-            <h1 class="cartao__titulo">Novo Pedido</h1>
+            <h1 class="cartao__titulo">Editar Pedido</h1>
             <form class="flex flex--coluna" data-form>
                 <div class="input-container">
                     <label class="input-label" for="id">Id</label>
@@ -45,7 +48,7 @@
                                         
                 </div>
                 <button type="submit"class="botao">
-                Cadastrar
+                Alterar Pedido
             </button>
             </form>
         </section>
