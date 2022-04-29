@@ -44,9 +44,15 @@
     },
     {
       "id": "8",
-      "nome": "Joana",
+      "nome": "Joana Prado",
       "preco": "800",
       "multiplo": "3"
+    },
+    {
+      "id": "9",
+      "nome": "Fernando MArtins",
+      "preco": "15",
+      "multiplo": "2"
     }
   ]
 }

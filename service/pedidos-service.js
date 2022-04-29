@@ -63,7 +63,7 @@ const atualizaPedido = (id, nome, preco, multiplo) => {
 }
 
 // ##############################################################
-//Processo para serem usado quando a página for publicada
+//Processos para serem usados quando a página for publicada
 
 const listaPedidosSite = () => {
     return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
