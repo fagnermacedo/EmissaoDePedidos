@@ -1,0 +1,25 @@
+        
+{
+    "clientes": [
+            {
+                "id":"1",
+                "nome": "Darth Vader"
+            },
+            {
+                "id":"2",
+                "nome":"Obi-Wan Kemobi"
+            },
+            {
+                "id":"3",
+                "nome":"Luke skywalker"
+            },
+            {
+                "id":"4",
+                "nome":"Imperador Palpatine"
+            },
+            {
+                "id":"5",
+                "nome":"Han Solo"
+            }
+        ]
+}
