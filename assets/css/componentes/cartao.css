@@ -1,0 +1,11 @@
+.cartao {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #d5e67838;
+    width: 100%;
+    max-width: 45rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+

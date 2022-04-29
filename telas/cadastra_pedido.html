@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alteração de pedidos</title>
+    <title>Cadastro de pedidos</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/componentes/cabecalho.css">
@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="../assets/css/flex.css">
 </head>
 <body>
-    <header class="cabecalhoPrincipal">
+    <header class="cabecalhoPrincipal cabecalho">
+        <img src="../img/logo-star-wars.png" alt="Logotipo Star Wars" class="cabecalho-logo">
         <div class="container">
             <nav class="cabecalhoPrincipal-nav">
                 <a class="cabecalhoPrincipal-nav-link">Produtos</a>
@@ -22,10 +23,9 @@
             </nav>
         </div>
     </header>
-    
-    <main class="flex-alteraPedido conteudoPrincipal">
+    <main class="flex-cadastroPrincipal cadastroPrincipal"> 
         <section class="cartao cadastro">
-            <h1 class="cartao__titulo">Editar Pedido</h1>
+            <h1 class="cartao__titulo">Novo Pedido</h1>
             <form class="flex flex--coluna" data-form>
                 <div class="input-container">
                     <label class="input-label" for="id">Id</label>
@@ -48,10 +48,8 @@
                                         
                 </div>
                 <button type="submit"class="botao">
-                Alterar Pedido
+                Cadastrar
             </button>
-            </form>
-        </section>
     </main>
 
     <footer class="rodapePrincipal">        
@@ -60,5 +58,7 @@
 
 </body>
 
-<script type="module" src="../controller/atualizaPedidosController.js"></script>
+<script type="module" src="../controller/cadastraPedidos-controller.js"></script>
+<script type="module" src="../controller/buscaClientesController.js"></script>
+
 </html>

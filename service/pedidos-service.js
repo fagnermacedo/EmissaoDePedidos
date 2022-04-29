@@ -1,46 +1,85 @@
-const criaNovaLinha = (id, nome, preco, multiplo) => {
-
-    const novaLinhaPedio = document.createElement('tr')
-    const conteudo = ` 
-        <td class="td" data-td>${id}</td>
-            <td>${nome}</td>
-            <td>${preco}</td>
-            <td>${multiplo}</td>
-            <td>
-                      <ul class="tabela__botoes-controle">
-                          <li><a href="../telas/edita_pedidos.html?id=${id}" class="botao-editar">Editar</a></li>
-                          <li><button class="botao-excluir" type="button">Excluir</button></li>
-                      </ul>
-            </td> 
-    `
-    novaLinhaPedio.innerHTML = conteudo
-    return novaLinhaPedio
-}
-
-const tabela = document.querySelector('[data-tabela]')
-
 const listaPedidos = () => {
-    const promise = new Promise ((resolve, reject) =>{
-        const http = new XMLHttpRequest()
-        http.open('GET','http://localhost:3000/profile')
-        
-        http.onload = () => {
-            if(http.status >= 400){
-                reject(JSON.parse(http.response))
-            } else {
-                resolve(JSON.parse(http.response))
-            }
-        }   
-        
-        http.send()
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
+    .then( resposta => {
+        return resposta.json()
     })
-    console.log("Teste promise")
-    return promise
 }
 
+const criaPedido = (id, nome, preco, multiplo) =>{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`),{
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            id: id,
+            nome: nome,
+            preco: preco,
+            multiplo: multiplo
+        })
+    })
+    .then(reposta => {
+        return reposta.body
+    })
+}
 
-listaPedidos()
-.then(data => {
-    data.forEach(element => {
-    tabela.appendChild(criaNovaLinha(element.id, element.nome, element.preco, element.multiplo))
-})})
+const removePedido = (id) => {
+    return fetch(`http://localhost:3000/profile/${id}`,{
+        method: 'DELETE',
+
+    })
+}
+
+const carregaPedidoParaEdicao = (id) => {
+    return fetch(`http://localhost:3000/profile/${id}`)
+    .then(resposta => {
+        return resposta.json()
+    })
+}
+
+const carregaClientesParaEdicao = (id) => {
+    return fetch(`http://localhost:3000/profile/${id}`)
+    .then(resposta => {
+        return resposta.json()
+    })
+}
+
+const atualizaPedido = (id, nome, preco, multiplo) => {
+    return fetch(`http://localhost:3000/profile/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-type' : 'application/json'
+        },
+        body: JSON.stringify({
+            id: id,
+            nome: nome,
+            preco: preco,
+            multiplo: multiplo
+        })
+    })
+    .then( resposta => {
+        return resposta.json()
+    })
+}
+
+// ##############################################################
+//Processos para serem usados quando a página for publicada
+
+const listaPedidosSite = () => {
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
+    .then(resposta => {
+        return resposta.json()
+    })
+}
+
+//###############################################################
+export const pedidosService = {
+    listaPedidos,
+    criaPedido,
+    removePedido,
+    carregaPedidoParaEdicao,
+    carregaClientesParaEdicao,
+    atualizaPedido,
+
+    listaPedidosSite
+}
