@@ -1,12 +1,12 @@
 const listaPedidos = () => {
-    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
+    return fetch(`http://localhost:3000/profile`)
     .then( resposta => {
         return resposta.json()
     })
 }
 
 const criaPedido = (id, nome, preco, multiplo) =>{
-    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`),{
+    return fetch(`http://localhost:3000/profile`,{
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -37,12 +37,12 @@ const carregaPedidoParaEdicao = (id) => {
     })
 }
 
-const carregaClientesParaEdicao = (id) => {
-    return fetch(`http://localhost:3000/profile/${id}`)
+const carregaClientesParaEdicao = () => {
+    return fetch(`http://localhost:3000/profile`)
     .then(resposta => {
         return resposta.json()
     })
-}
+} 
 
 const atualizaPedido = (id, nome, preco, multiplo) => {
     return fetch(`http://localhost:3000/profile/${id}`, {

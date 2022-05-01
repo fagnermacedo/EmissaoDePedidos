@@ -18,6 +18,7 @@
         <img src="../img/logo-star-wars.png" alt="Logotipo Star Wars" class="cabecalho-logo">
         <div class="container">
             <nav class="cabecalhoPrincipal-nav">
+                <a class="cabecalhoPrincipal-nav-link" href="../index.html">Home</a>
                 <a class="cabecalhoPrincipal-nav-link">Produtos</a>
                 <a class="cabecalhoPrincipal-nav-link">Clientes</a>
             </nav>
@@ -33,20 +34,37 @@
                     
                 </div>
                 <div class="input-container">
-                    <label class="input-label" for="nome">Nome</label>
-                    <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required data-nome>
+                    <label class="input-label"  for="nome">Produto</label>
+                    <select name="nomesClientes" data-combobox id="nomesClientes">
+
+                    </select>
                                         
                 </div>
-                <div class="input-container">
+                <div class="input-container"> 
                     <label class="input-label" for="preco" >Preço</label>
-                    <input name="preco" id="preco" class="input" type="text" placeholder="preço" required data-preco>
+                    <input name="preco" id="preco" class="input" type="text" placeholder="preço" required data-preco onblur="validaFormularioCliente()">
                                         
                 </div>
                 <div class="input-container">
                     <label class="input-label" for="multiplo">Multiplo</label>
-                    <input name="multiplo" id="multiplo" class="input" type="text" placeholder="Multiplo" data-multiplo>
+                    <input name="multiplo" id="multiplo" class="input" type="text" placeholder="Multiplo" data-multiplo onblur="validaFormularioCliente()">
                                         
                 </div>
+
+                <ul>
+                    <div class="mensagemValidacao">
+                        <li class="validacao validaId" id="validaId"data-valida-id>Id precisa ser um número válido, maior que zero</li>
+                        <p class="check checkId">&#10004</p>
+                    </div>
+                    <div class="mensagemValidacao">
+                        <li class="validacao validaPreco" id="validaPreco" data-valida-preco>Preço precisa ser maior que R$ 10,00</li>
+                        <p class="check checkNome">&#10004</p>
+                    </div>
+                </ul>
+               
+               
+
+
                 <button type="submit"class="botao">
                 Cadastrar
             </button>
@@ -60,5 +78,6 @@
 
 <script type="module" src="../controller/cadastraPedidos-controller.js"></script>
 <script type="module" src="../controller/buscaClientesController.js"></script>
+<script  src="../controller/validacaoFormulariosController.js"></script>
 
 </html>

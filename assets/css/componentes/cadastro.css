@@ -29,3 +29,22 @@ input {
 .input-container {
     margin-bottom: 15px;
 }
+
+.botao {
+    margin-top: 60px;
+}
+
+.validacao {
+    padding: 5px;
+    color: red;
+}
+
+.checkId {
+    display: none;
+    color: green;
+}
+
+.checkNome {
+    display: none;
+    color: green;
+}
