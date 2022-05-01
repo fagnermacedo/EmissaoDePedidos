@@ -24,14 +24,14 @@ const criaPedido = (id, nome, preco, multiplo) =>{
 }
 
 const removePedido = (id) => {
-    return fetch(`http://localhost:3000/profile/${id}`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json/${id}`,{
         method: 'DELETE',
 
     })
 }
 
 const carregaPedidoParaEdicao = (id) => {
-    return fetch(`http://localhost:3000/profile/${id}`)
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json/${id}`)
     .then(resposta => {
         return resposta.json()
     })
@@ -45,7 +45,7 @@ const carregaClientesParaEdicao = () => {
 } 
 
 const atualizaPedido = (id, nome, preco, multiplo) => {
-    return fetch(`http://localhost:3000/profile/${id}`, {
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json/${id}`, {
         method: 'PUT',
         headers: {
             'Content-type' : 'application/json'
