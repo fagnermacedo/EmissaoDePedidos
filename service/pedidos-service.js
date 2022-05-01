@@ -1,12 +1,12 @@
 const listaPedidos = () => {
-    return fetch(`http://localhost:3000/profile`)
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
     .then( resposta => {
         return resposta.json()
     })
 }
 
 const criaPedido = (id, nome, preco, multiplo) =>{
-    return fetch(`http://localhost:3000/profile`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`,{
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -38,7 +38,7 @@ const carregaPedidoParaEdicao = (id) => {
 }
 
 const carregaClientesParaEdicao = () => {
-    return fetch(`http://localhost:3000/profile`)
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
     .then(resposta => {
         return resposta.json()
     })
@@ -62,24 +62,11 @@ const atualizaPedido = (id, nome, preco, multiplo) => {
     })
 }
 
-// ##############################################################
-//Processos para serem usados quando a página for publicada
-
-const listaPedidosSite = () => {
-    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`)
-    .then(resposta => {
-        return resposta.json()
-    })
-}
-
-//###############################################################
 export const pedidosService = {
     listaPedidos,
     criaPedido,
     removePedido,
     carregaPedidoParaEdicao,
     carregaClientesParaEdicao,
-    atualizaPedido,
-
-    listaPedidosSite
+    atualizaPedido,    
 }
