@@ -41,14 +41,29 @@
                 </div>
                 <div class="input-container"> 
                     <label class="input-label" for="preco" >Preço</label>
-                    <input name="preco" id="preco" class="input" type="text" placeholder="preço" required data-preco>
+                    <input name="preco" id="preco" class="input" type="text" placeholder="preço" required data-preco onblur="validaFormularioCliente()">
                                         
                 </div>
                 <div class="input-container">
                     <label class="input-label" for="multiplo">Multiplo</label>
-                    <input name="multiplo" id="multiplo" class="input" type="text" placeholder="Multiplo" data-multiplo>
+                    <input name="multiplo" id="multiplo" class="input" type="text" placeholder="Multiplo" data-multiplo onblur="validaFormularioCliente()">
                                         
                 </div>
+
+                <ul>
+                    <div class="mensagemValidacao">
+                        <li class="validacao validaId" id="validaId"data-valida-id>Id precisa ser um número válido, maior que zero</li>
+                        <p class="check checkId">&#10004</p>
+                    </div>
+                    <div class="mensagemValidacao">
+                        <li class="validacao validaPreco" id="validaPreco" data-valida-preco>Preço precisa ser maior que R$ 10,00</li>
+                        <p class="check checkNome">&#10004</p>
+                    </div>
+                </ul>
+               
+               
+
+
                 <button type="submit"class="botao">
                 Cadastrar
             </button>
@@ -62,5 +77,6 @@
 
 <script type="module" src="../controller/cadastraPedidos-controller.js"></script>
 <script type="module" src="../controller/buscaClientesController.js"></script>
+<script  src="../controller/validacaoFormulariosController.js"></script>
 
 </html>

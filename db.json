@@ -59,6 +59,12 @@
       "nome": "Millenium_Falcon",
       "preco": "36",
       "multiplo": "32"
+    },
+    {
+      "id": "12",
+      "nome": "Millenium_Falcon",
+      "preco": "1",
+      "multiplo": "1"
     }
   ]
 }
