@@ -1,24 +1,14 @@
 import { pedidosService } from "../service/pedidos-service.js"
 
 const criaNovaLinha = (nome) => {
-    
-    // const novaLinhaPedido = document.createElement('select')
-    // const conteudo = ` 
-    //     <option class="comboxOpcoes" value="" data-combo>${nome}</option>
-    //     `
-    //  novaLinhaPedido.innerHTML = conteudo
-    //  return novaLinhaPedido
-    
-    const criaTagOption = document.createElement("option")
-    criaTagOption.innerText = `${nome}`
-    
+        
+    const criaTagOption = document.createElement("option")    
+    criaTagOption.innerText = `${nome}`    
     criaTagOption.className = "comboOpcoes"
-
+    criaTagOption.setAttribute("data-nome", "data-nome")
 
     return criaTagOption
 }
-
-
 
 const combobox = document.querySelector('[data-combobox]')
 
@@ -33,7 +23,3 @@ pedidosService.carregaClientesParaEdicao()
          
     })
 })
-// .then(() => {
-//     combobox.appendChild(criaNovaLinha(listaDeClientes[cont].nome))   
-    
-// })
