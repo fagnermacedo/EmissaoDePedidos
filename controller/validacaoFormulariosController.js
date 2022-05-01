@@ -13,12 +13,17 @@ function validaFormularioCliente() {
     if(validaEntrada(valorPreco) ){
         document.getElementsByClassName("checkId")[0].style.display = "block"
         document.getElementsByClassName("validaId")[0].style.color = "green"        
+    }else {
+        document.getElementsByClassName("checkId")[0].style.display = "none"
+        document.getElementsByClassName("validaId")[0].style.color = "red" 
     }
     
     if(validaEntrada(valorMultiplo) ){
         document.getElementsByClassName("checkNome")[0].style.display = "block"
-        document.getElementsByClassName("validaPreco")[0].style.color = "green"
-        
+        document.getElementsByClassName("validaPreco")[0].style.color = "green"        
+    }else {
+        document.getElementsByClassName("checkNome")[0].style.display = "none"
+        document.getElementsByClassName("validaPreco")[0].style.color = "red"
     }
     
 }
