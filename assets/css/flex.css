@@ -58,3 +58,8 @@ body {
     display: flex;
     flex-wrap: nowrap;
 }
+
+.flex-listaClientes {
+    display: flex;
+    justify-content: center;
+}
