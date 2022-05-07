@@ -43,4 +43,6 @@ pedidosService.listaPedidos()
 .then(data => {
     data.forEach(element => {
     tabela.appendChild(criaNovaLinha(element.id, element.nome, element.preco, element.multiplo))
+    
+    
 })})

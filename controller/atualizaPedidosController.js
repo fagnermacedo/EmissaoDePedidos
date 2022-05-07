@@ -28,3 +28,4 @@ formulario.addEventListener('submit', (evento) => {
         window.location.href = "../telas/edicao_concluida.html"
     })
 })
+

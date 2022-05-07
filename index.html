@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/css/componentes/cabecalho.css">
     <link rel="stylesheet" href="assets/css/componentes/tabela.css">    
     <link rel="stylesheet" href="assets/css/flex.css">
+
+
+ 
 </head>
 <body>
     <header class="cabecalhoPrincipal cabecalho">
@@ -23,8 +26,10 @@
         </div>
     </header>
     
+    <button type="button" data-botao>Ordenar</button>
+
     <main class="conteudoPrincipal flex-ConteudoPrincipal">
-        <table class="tabela conteudoPrincipal-tabela">
+        <table class="tabela conteudoPrincipal-tabela tablesorter" data-tabela>
             <thead>
                 <tr>
                     <th class="conteudoPrincipal-tabela-coluna-id">Id</th>
@@ -47,4 +52,14 @@
 </body>
 
 <script type="module" src="controller/listaPedidos-controller.js"></script>
+
+   <!--            --------------- Importação do JQuery ---------------                -->
+
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+   <script src="controller/ordenacaoPedidosController.js"></script>
+       
+
 </html>
