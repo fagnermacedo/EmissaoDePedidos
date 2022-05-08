@@ -4,7 +4,7 @@ const listaPedidos = () => {
     })
     .then( resposta => {
         console.log(typeof(resposta))
-        return resposta.json()
+        return resposta.JSON.parse()
     })
 }
 
