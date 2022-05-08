@@ -6,7 +6,7 @@ const listaPedidos = () => {
 }
 
 const criaPedido = (id, nome, preco, multiplo) =>{
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/EmissaoDePedidos/main/db.json`,{
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -25,7 +25,7 @@ const criaPedido = (id, nome, preco, multiplo) =>{
 }
 
 const removePedido = (id) => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/EmissaoDePedidos/main/db.json/${id}`,{
         method: 'DELETE',
         mode: 'no-cors'
 
@@ -33,7 +33,7 @@ const removePedido = (id) => {
 }
 
 const carregaPedidoParaEdicao = (id) => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/EmissaoDePedidos/main/db.json/${id}`,{
     mode: 'no-cors'
     })
     .then(resposta => {
@@ -42,7 +42,7 @@ const carregaPedidoParaEdicao = (id) => {
 }
 
 const carregaClientesParaEdicao = () => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/EmissaoDePedidos/main/db.json`,{
     mode: 'no-cors'
     })
     .then(resposta => {
@@ -51,7 +51,7 @@ const carregaClientesParaEdicao = () => {
 } 
 
 const atualizaPedido = (id, nome, preco, multiplo) => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`, {
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/EmissaoDePedidos/main/db.json/${id}`, {
         method: 'PUT',
         headers: {
             'Content-type' : 'application/json'
