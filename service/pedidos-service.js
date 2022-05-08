@@ -3,8 +3,7 @@ const listaPedidos = () => {
         mode: 'no-cors'
     })
     .then( resposta => {
-        console.log(typeof(resposta))
-        return resposta.JSON.parse()
+         return resposta.JSON.parse()
     })
 }
 
