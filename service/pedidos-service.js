@@ -1,5 +1,7 @@
 const listaPedidos = () => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`)
+    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`,{
+        mode: 'no-cors',
+    })
     .then( resposta => {
         return resposta.json()
     })
@@ -11,6 +13,7 @@ const criaPedido = (id, nome, preco, multiplo) =>{
         headers: {
             'Content-Type' : 'application/json'
         },
+        mode: 'no-cors',
         body: JSON.stringify({
             id: id,
             nome: nome,
@@ -26,19 +29,26 @@ const criaPedido = (id, nome, preco, multiplo) =>{
 const removePedido = (id) => {
     return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
         method: 'DELETE',
+        mode: 'no-cors',
 
     })
 }
 
 const carregaPedidoParaEdicao = (id) => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`)
+    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
+    
+    mode: 'no-cors',
+
+    })
     .then(resposta => {
         return resposta.json()
     })
 }
 
 const carregaClientesParaEdicao = () => {
-    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`)
+    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`,{
+    mode: 'no-cors',
+    })
     .then(resposta => {
         return resposta.json()
     })
@@ -50,6 +60,7 @@ const atualizaPedido = (id, nome, preco, multiplo) => {
         headers: {
             'Content-type' : 'application/json'
         },
+        mode: 'no-cors',
         body: JSON.stringify({
             id: id,
             nome: nome,
