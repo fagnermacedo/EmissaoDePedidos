@@ -1,5 +1,5 @@
 const listaPedidos = () => {
-    return fetch(`https://raw.githubusercontent.com/fagnermacedo/EmissaoDePedidos/main/db.json`,{
+    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json`,{
         mode: 'no-cors'
     })
     .then( resposta => {
