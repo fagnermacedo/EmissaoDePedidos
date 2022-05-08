@@ -24,7 +24,7 @@ const criaPedido = (id, nome, preco, multiplo) =>{
 }
 
 const removePedido = (id) => {
-    return fetch(`https://raw.githubusercontent.com/fagnermacedo/pedidoscompras/main/db.json/${id}`,{
+    return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
         method: 'DELETE',
 
     })
