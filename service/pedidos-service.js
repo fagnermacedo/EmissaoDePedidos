@@ -1,6 +1,6 @@
 const listaPedidos = () => {
     return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`,{
-        mode: 'no-cors',
+        mode: 'no-cors'
     })
     .then( resposta => {
         return resposta.json()
@@ -29,16 +29,14 @@ const criaPedido = (id, nome, preco, multiplo) =>{
 const removePedido = (id) => {
     return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
         method: 'DELETE',
-        mode: 'no-cors',
+        mode: 'no-cors'
 
     })
 }
 
 const carregaPedidoParaEdicao = (id) => {
     return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json/${id}`,{
-    
-    mode: 'no-cors',
-
+    mode: 'no-cors'
     })
     .then(resposta => {
         return resposta.json()
@@ -47,7 +45,7 @@ const carregaPedidoParaEdicao = (id) => {
 
 const carregaClientesParaEdicao = () => {
     return fetch(`https://github.com/fagnermacedo/EmissaoDePedidos/blob/main/db.json`,{
-    mode: 'no-cors',
+    mode: 'no-cors'
     })
     .then(resposta => {
         return resposta.json()
